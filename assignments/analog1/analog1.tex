@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}%for inserting images
+\usepackage{fontenc}
+\usepackage{amsmath}
+\usepackage{physics}
+
+
+
+\begin{document}
+
+\section*{Analog assignment}
+Roll no. : ee23btech11220
+
+\textbf{\section{Problem 12.7.8}}
+
+\textbf{Given,}
+
+
+     initial charge on capacitor is 6mC.
+
+    \includegraphics[scale=1,natwidth=3.175cm,natheight=3.7cm]{circuit.png}
+\begin{center}
+    \textbf{Total energy stored initially=Work done to bring the charge of 6mC to capacitor from infinity. }
+
+\end{center}
+
+We know that , where A is some point in space.
+
+\[V_{A}=\frac{W_{\infty \to A}}{q}\]
+
+Here , 
+\begin{align}
+      q&=Quantity of charge brought from infinity to A\notag\\
+      V_{A}&=Electric potential at some point A\notag
+\end{align}
+
+So,
+\[dW=V.dq\]
+Equation of a capacitor is ,
+\[q=CV\]
+From this V can be replaced by ,
+\[V=\frac{q}{C}\]
+So,
+\[dW=\frac{q}{C}.dq\]
+Now,integrate on both sides
+\[\int_0^WdW=\int_0^6\frac{q}{C}dq\]
+\textbf{Note: Here the units of charge is milli-coulombs(mC)}
+\[W=\frac{q^{2}}{2C} \bigg|_{0}^{6}\]
+Given,
+\[C=30\mu F\]
+Hence,
+\[W=\frac{36*10^{-6}}{2*30*10^{-6}}\]
+Hence, after simplification
+\[W=\frac{18}{30} J=\frac{3}{5} J=0.6 J\]
+So, 0.6 J is the total energy initially stored in the circuit.If we assume that there is no loss of energy from both capacitor and inductor i.e, they are both ideal then we can conclude that total energy in the circuit at a  later time is also 0.6 J .
+  
+
+
+
+
+
+\end{document}
