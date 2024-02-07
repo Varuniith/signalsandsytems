@@ -59,17 +59,9 @@
 Find $a_{9}$ in the sequence $a_{n}=\brak{-1}^{n-1}n^{3}$ 
 \section*{Solution}
 \textbf{Given,} 
-\begin{align}
-x\brak{n}=\brak{-1}^{n-1}\cdot n^{3}\cdot u\brak{n}\\ \text{Subsitute n=9,}\nonumber \\x\brak{9}=729\\
-X\brak{z}=\sum_{n=-\infty}^{n=\infty}x\brak{n}\cdot z^{-n}\\
-X\brak{z}=\frac{6z^2}{\brak{z^2-1}^{2}}\\
-\text{ROC}\implies\{z:|z|>1\}
-\end{align} 
-
 \begin{table}[h]
     \centering
     \begin{tabular}{|c|c|}
-    \input{assignments/digital1/tables/table.tex}
     \hline
         Symbol &Description \\
         \hline
@@ -84,9 +76,16 @@ X\brak{z}=\frac{6z^2}{\brak{z^2-1}^{2}}\\
     \caption{Table of parameters}
     \label{tab:my_label}
 \end{table}
+\begin{align}
+x\brak{n}=\brak{-1}^{n-1}\cdot n^{3}\cdot u\brak{n}\\ \text{Subsitute n=9,}\nonumber \\x\brak{9}=729\\ \text{Using  z transform,}\nonumber\\
+X\brak{z}=\sum_{n=-\infty}^{n=\infty}\brak{-1}^{n-1}\cdot n^{3}\cdot u\brak{n}\cdot z^{-n}\\
+X\brak{z}=\frac{6z^2}{\brak{z^2-1}^{2}}\hspace{10pt}
+ \{z:|z|>1\}
+\end{align} 
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\linewidth]{graph.png} 
+    \includegraphics[width=1\linewidth]{graph.jpg} 
     \label{fig:enter-label}
 \end{figure}
 \begin{center}
