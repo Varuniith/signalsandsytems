@@ -65,11 +65,13 @@ Find $a_{9}$ in the sequence $a_{n}=\brak{-1}^{n-1}n^{3}$
     \hline
         Symbol &Description \\
         \hline
-         a\brak{0}& first term of the sequence\\
+         x\brak{0}& first term of the sequence\\
          \hline
-         a\brak{n}& \brak{n+1}th term of the sequence \\
+         x\brak{n}& \brak{n+1}th term of the sequence \\
          \hline
-         a\brak{z}& $\mathcal{Z}$- transform of a\brak{n} \\
+         x\brak{z}& $z$- transform of a\brak{n} \\
+         \hline
+         u\brak{n}& unit step function\\
          \hline
     \end{tabular}
     \vspace{10pt}
@@ -77,16 +79,19 @@ Find $a_{9}$ in the sequence $a_{n}=\brak{-1}^{n-1}n^{3}$
     \label{tab:my_label}
 \end{table}
 \begin{align}
-a\brak{n}=\brak{-1}^{n-1}\cdot n^{3}\cdot u\brak{n}
+x\brak{n}=a_{n+1}
 \end{align}
-Subsitute n=9,
 \begin{align}
-a\brak{9}=729
+x\brak{n}=\brak{-1}^{n}\cdot \brak{n+1}^{3}\cdot u\brak{n}
+\end{align}
+Subsitute n=8,
+\begin{align}
+x\brak{8}=729
 \end{align}
 Using  z transform,
 \begin{align}
-a\brak{z}=\sum_{n=-\infty}^{n=\infty}\brak{-1}^{n-1}\cdot n^{3}\cdot u\brak{n}\cdot z^{-n}\\
-a\brak{z}=\frac{z^{-1}\brak{1+4z^{-1}+z^{-2}}}{\brak{1-z^{-1}}^{4}}\hspace{10pt}
+x\brak{z}=\sum_{n=-\infty}^{n=\infty}\brak{-1}^{n}\cdot (n+1)^{3}\cdot u\brak{n}\cdot z^{-n}\\
+x\brak{z}=\frac{z^{-1}\brak{1+4z^{-1}+z^{-2}}}{\brak{1-z^{-1}}^{4}}\hspace{10pt}
 \{z:|z|>1\}
 \end{align} 
 
@@ -96,6 +101,6 @@ a\brak{z}=\frac{z^{-1}\brak{1+4z^{-1}+z^{-2}}}{\brak{1-z^{-1}}^{4}}\hspace{10pt}
     \label{fig:enter-label}
 \end{figure}
 \begin{center}
-Graph of a\brak{n}
+Graph of x\brak{n}
    \end{center}
 \end{document}
