@@ -1,33 +1,100 @@
-\documentclass[12pt]{article}
-\usepackage{graphicx} % Required for inserting images
+% \iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[beamer]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage[export]{adjustbox}
 
-
-
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
 \begin{document}
+\parindent 0px
+\bibliographystyle{IEEEtran}
 
+\title{Assignment\\[1ex]11.9.5 - 22}
+\author{EE23BTECH11220 - R.V.S.S Varun$^{}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
 
-\section*{Digital assignment}
-\subsection*{Roll number : ee23btech11220}
-
-
-\section{\textbf{Problem 11.9.5.22}}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\section*{Question}
+Find the 20th term in this series.\\
 $$2\times4+4\times6+6\times8\cdots+n\,terms$$ 
 
 
-Find the 20th term in this series.\\
+\section*{Solution}
 
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Symbol &Description \\
+        \hline
+         x\brak{1}&first term of the series \\
+         \hline
+         x\brak{n}&$n^{th}$ term of the series  \\
+         \hline
+    \end{tabular}
+    \caption{Table of parameters}
+    \label{tab:my_label}
+\end{table}
 \textbf{Given,}
-series is of the form
-\begin{equation}
-\sum_{r=1}^{r=n} 2*r*2*(r+1)
-\end{equation}
-\begin{equation}
-\sum_{r=1}^{r=n} 4*r*(r+1)
-\end{equation}
-So $20^{th}$ term of this series is obtained by substituting r=20 in\\ $4*r*(r+1)$
-= 4*20*21
-= 80*21
-=1680
-
-\includegraphics[scale=0.8]{assignments/digital2/graphs/graph2.png}
+\begin{align}
+  x\brak{n}=4n(n+1)
+\end{align}
+Substitute n=20 ,
+\begin{align}
+    x\brak{20}=4*20*21
+\end{align}
+\begin{align}
+    x\brak{20}=1680
+\end{align}
+So $20^{th}$ term of this series is 1680.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{graph.jpg}
+    
+    \label{fig:enter-label}
+\end{figure}
+\begin{center}
+Graph of x\brak{n}
+   \end{center}
 \end{document}
