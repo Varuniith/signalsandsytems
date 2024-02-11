@@ -1,62 +1,66 @@
-\documentclass[12pt]{article}
-\usepackage{graphicx}%for inserting images
-\usepackage{fontenc}
-\usepackage{amsmath}
-\usepackage{physics}
+% \iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[beamer]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage[export]{adjustbox}
 
-
-
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
 \begin{document}
+\parindent 0px
+\bibliographystyle{IEEEtran}
 
-\section*{Analog assignment}
-Roll no. : ee23btech11220
+\title{Assignment\\[1ex]12.8 - 6}
+\author{EE23BTECH11220 - R.V.S.S Varun$^{}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
 
-\textbf{\section{Problem 12.7.8}}
-
-\textbf{Given,}
-
-
-     initial charge on capacitor is 6mC.
-
-    \includegraphics[scale=1,natwidth=3.175cm,natheight=3.7cm]{circuit.png}
-\begin{center}
-    \textbf{Total energy stored initially=Work done to bring the charge of 6mC to capacitor from infinity. }
-
-\end{center}
-
-We know that , where A is some point in space.
-
-\[V_{A}=\frac{W_{\infty \to A}}{q}\]
-
-Here , 
-\begin{align}
-      q&=Quantity of charge brought from infinity to A\notag\\
-      V_{A}&=Electric potential at some point A\notag
-\end{align}
-
-So,
-\[dW=V.dq\]
-Equation of a capacitor is ,
-\[q=CV\]
-From this V can be replaced by ,
-\[V=\frac{q}{C}\]
-So,
-\[dW=\frac{q}{C}.dq\]
-Now,integrate on both sides
-\[\int_0^WdW=\int_0^6\frac{q}{C}dq\]
-\textbf{Note: Here the units of charge is milli-coulombs(mC)}
-\[W=\frac{q^{2}}{2C} \bigg|_{0}^{6}\]
-Given,
-\[C=30\mu F\]
-Hence,
-\[W=\frac{36*10^{-6}}{2*30*10^{-6}}\]
-Hence, after simplification
-\[W=\frac{18}{30} J=\frac{3}{5} J=0.6 J\]
-So, 0.6 J is the total energy initially stored in the circuit.If we assume that there is no loss of energy from both capacitor and inductor i.e, they are both ideal then we can conclude that total energy in the circuit at a  later time is also 0.6 J .
-  
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\section*{Question}
 
 
+A charged 30 $\mu$F capacitor is connected to a 27 mH inductor. Suppose the initial charge on the capacitor is 6mC.What is the total energy stored in the circuit initially? What is the
+total energy at later time?
 
-
+\section*{Solution}
 
 \end{document}
