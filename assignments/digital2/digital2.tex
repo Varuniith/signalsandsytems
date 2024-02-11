@@ -64,14 +64,17 @@ $$2\times4+4\times6+6\times8\cdots+n\,terms$$
 
 \begin{table}[h]
     \centering
-    \input{assignments/digital2/tables/table.tex}
     \begin{tabular}{|c|c|}
         \hline
         Symbol &Description \\
         \hline
-         x\brak{1}&first term of the series \\
+         x\brak{0}&first term of the series \\
          \hline
-         x\brak{n}&$n^{th}$ term of the series  \\
+         x\brak{n}&$\brak{n+1}^{th}$ term of the series  \\
+         \hline
+         x\brak{z}&z-transform of x\brak{n}\\
+         \hline
+         u\brak{n}&unit step function\\
          \hline
     \end{tabular}
     \caption{Table of parameters}
@@ -79,19 +82,26 @@ $$2\times4+4\times6+6\times8\cdots+n\,terms$$
 \end{table}
 \textbf{Given,}
 \begin{align}
-  x\brak{n}=4n(n+1)
+  x\brak{n}=4\brak{n+1}\brak{n+2}u\brak{n}
 \end{align}
-Substitute n=20 ,
+Substitute n=19 ,
 \begin{align}
-    x\brak{20}=4*20*21
+    x\brak{19}=4*20*21
 \end{align}
 \begin{align}
-    x\brak{20}=1680
+    x\brak{19}=1680
 \end{align}
-So $20^{th}$ term of this series is 1680.
+So $20^{th}$ term of this series is 1680.\\
+Using z- transform,
+\begin{align}
+    x\brak{z}=\sum_{n=-\infty}^{n=\infty}4\brak{n+1}\brak{n+2}u\brak{n}z^{-n}
+\end{align}
+\begin{align}
+    x\brak{z}=\frac{8}{\brak{1-z^{-1}}^2}
+\end{align}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\linewidth]{graph.jpg}
+    \includegraphics[width=0.95\linewidth]{graph.jpg}
     
     \label{fig:enter-label}
 \end{figure}
