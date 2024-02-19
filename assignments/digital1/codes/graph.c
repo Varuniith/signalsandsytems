@@ -1,23 +1,23 @@
 #include <stdio.h>
-#include <math.h>
+#include <math.h> 
 
 int main() {
     FILE *file;
-    file = fopen("points.txt", "w");
+    file = fopen("codes/points.txt", "w");
 
     if (file == NULL) {
         printf("Error opening file.\n");
         return 1;
     }
 
-    int n, end;
+    int n,end;
     printf("Enter the end value for n: ");
     scanf("%d", &end);
 
     // Generate and store points in the text file
     
     for (n = 1; n <= end; n++) {
-        double result = pow(-1, n-1) * pow(n, 3);
+        double result = pow(-1, n) * pow(n+1, 3);
         fprintf(file, "%d\t%.2f\n", n, result);
     }
 
