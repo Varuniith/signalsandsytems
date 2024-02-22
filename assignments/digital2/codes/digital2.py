@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 # Read points from the text file
-file_path = 'codes/digital2_points.txt'
+file_path = 'digital2_points.txt'
 with open(file_path, 'r') as file:
     lines = file.readlines()
 

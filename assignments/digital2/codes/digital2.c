@@ -2,7 +2,7 @@
 
 int main() {
     FILE *fp;
-    fp = fopen("codes/digital2_points.txt", "w");
+    fp = fopen("digital2_points.txt", "w");
 
     if (fp == NULL) {
         printf("Error opening file for writing.\n");
@@ -22,7 +22,7 @@ int main() {
 
     fclose(fp);
 
-    printf("Stem plot points have been written to 'stem_plot_points.txt'.\n");
+    printf("Stem plot points have been written to 'digital2_points.txt'.\n");
 
     return 0;
 }
