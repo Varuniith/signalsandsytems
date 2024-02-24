@@ -70,18 +70,7 @@ total energy at later time?
   
     
 
-
-\begin{circuitikz}
-
- % Inductor
-  \draw (0,0) to[L, l=$L$] (2,0);
-  
-  % Capacitor
-  \draw (2,0) -- (2,-2) to[C, l=$C$] (0,-2) -- (0,0);
-
-
-
-\end{circuitikz}
+    \input{figs/ckt1.tex}
 
 
 
@@ -91,9 +80,8 @@ total energy at later time?
   
     \caption{Circuit diagram}
      
-    \label{fig:circuit}
+   \label{fig:12.7.8.1}
 \end{figure}
-
 \begin{table}[h]
   \centering
   \begin{tabular}{|c|c|c|}
@@ -121,7 +109,7 @@ total energy at later time?
   \end{tabular}
   \vspace{5pt}
   \caption{Table of parameters}
-  \label{tab:mytable}
+  \label{tab:12.7.8.1}
 \end{table}
 \begin{align}
     L\frac{di\brak{t}}{dt}+\frac{1}{C}\smallint_{-\infty}^{t}i\brak{t}dt=0
