@@ -84,30 +84,7 @@ total energy at later time?
 \end{figure}
 \begin{table}[h]
   \centering
-  \begin{tabular}{|c|c|c|}
-    \hline
-    Symbol & Description & Value\\
-    \hline
-    q\brak{0^{+}} & Initial charge on capacitor & 6\ mC \\
-    \hline
-    q&Charge on capacitor&-\\
-    \hline
-    L & Value of inductance & 27\ mH \\
-    \hline
-    C & Value of capacitance & $30\ \mu F$ \\
-    \hline
-    E&Total energy stored in circuit&-\\
-    \hline
-    $E_L$&Energy stored in inductor&-\\
-    \hline
-    $E_C$&Energy stored in capacitor&-\\
-    \hline
-    i&current in the inductor&-\\
-    \hline
-    I\brak{s}&Laplace transform of i\brak{t}&-\\
-    \hline
-  \end{tabular}
-  \vspace{5pt}
+  \input{tables/table.tex}
   \caption{Table of parameters}
   \label{tab:12.7.8.1}
 \end{table}
@@ -115,36 +92,28 @@ total energy at later time?
     L\frac{di\brak{t}}{dt}+\frac{1}{C}\smallint_{-\infty}^{t}i\brak{t}dt=0
 \end{align}
 \begin{align}
-      L\frac{di\brak{t}}{dt}+\frac{1}{C}\smallint_{-\infty}^{0}i\brak{t}dt+\frac{1}{C}\smallint_{0}^{t}i\brak{t}dt=0
-\end{align}
-\vspace{10pt}
-\begin{align}
-\mathcal{L}\{u\brak{t}\} \xleftrightarrow{} \frac{1}{s}
-\end{align}
-
-\begin{align}
+      L\frac{di\brak{t}}{dt}+\frac{1}{C}\smallint_{-\infty}^{0}i\brak{t}dt+\frac{1}{C}\smallint_{0}^{t}i\brak{t}dt=0\\
+\mathcal{L}\{u\brak{t}\} \xleftrightarrow{} \frac{1}{s}\\
 \mathcal{L} \left\{\frac{dq}{dt}\right\}\xleftrightarrow{} sQ\brak{s}
 \end{align}
 \begin{align}
  i\brak{t}=\frac{dq}{dt}
 \end{align}
-Laplace transform with variable s,
+From laplace transformations \brak{3} and \brak{4},
 \begin{align}
     L{sI\brak{s}}+\frac{1}{C}\frac{q\brak{0^{+}}}{s}+\frac{1}{C}\frac{I\brak{s}}{s}=0
 \end{align}
 \begin{align}
     I\brak{s}= \frac{-q\brak{0^{+}}}{LCs^2+1}
 \end{align}
-\vspace{10pt}
-To find initial value of current ,
+From initial value theorem ,
 \begin{align}
     i\brak{0^{+}}=\lim_{s\to\infty}[sI\brak{s}]
 \end{align}
 \begin{align}
     i\brak{0^{+}}=\lim_{s\to\infty}\left[s\frac{-q\brak{0^{+}}}{LCs^2+1}\right]=0
 \end{align}
-\vspace{10pt}
-To find final value of current ,
+From final value theorem ,
 \begin{align}
      i\brak{\infty}=\lim_{s\to0}[sI\brak{s}]
 \end{align}
