@@ -60,11 +60,32 @@
 A charged 30 $\mu$F capacitor is connected to a 27 mH inductor. Suppose the initial charge on the capacitor is 6mC.What is the total energy stored in the circuit initially? What is the
 total energy at later time?
 \section*{Solution}
-Given,
+\begin{figure}[h]
 
 
-     Initial charge on capacitor is 6mC.
-     \begin{figure}[h]
+  
+    
+
+    \input{figs/ckt2.tex}
+
+
+
+  
+  
+       
+  
+    \caption{Circuit diagram}
+     
+   \label{fig:12.7.8.1}
+\end{figure}
+
+\begin{table}[h]
+  \centering
+  \input{tables/table.tex}
+  \caption{Table of parameters}
+  \label{tab:12.7.8.1}
+\end{table}
+ \begin{figure}[h]
 
 
   
@@ -78,51 +99,30 @@ Given,
   
        
   
-    \caption{Circuit diagram}
+    \caption{Circuit diagram in laplace domain}
      
-   \label{fig:12.7.8.1}
+   \label{fig:12.7.8.2}
 \end{figure}
-\begin{table}[h]
-  \centering
-  \input{tables/table.tex}
-  \caption{Table of parameters}
-  \label{tab:12.7.8.1}
-\end{table}
+Writing KVL in above circuit,
 \begin{align}
-    L\frac{di\brak{t}}{dt}+\frac{1}{C}\smallint_{-\infty}^{t}i\brak{t}dt=0
+    L{sI\brak{s}}+\frac{v\brak{0^{+}}}{s}+\frac{1}{C}\frac{I\brak{s}}{s}=0
 \end{align}
 \begin{align}
-      L\frac{di\brak{t}}{dt}+\frac{1}{C}\smallint_{-\infty}^{0}i\brak{t}dt+\frac{1}{C}\smallint_{0}^{t}i\brak{t}dt=0
-\end{align}
-\begin{gather}
-\begin{align}
-\mathcal{L}\{u\brak{t}\} \xleftrightarrow{} \frac{1}{s}\\
-\mathcal{L} \left\{\frac{dq}{dt}\right\}\xleftrightarrow{} sQ\brak{s}
-\end{align}
-\end{gather}
-\begin{align}
- i\brak{t}=\frac{dq}{dt}
-\end{align}
-From laplace transformations \brak{3} and \brak{4},
-\begin{align}
-    L{sI\brak{s}}+\frac{1}{C}\frac{q\brak{0^{+}}}{s}+\frac{1}{C}\frac{I\brak{s}}{s}=0
-\end{align}
-\begin{align}
-    I\brak{s}= \frac{-q\brak{0^{+}}}{LCs^2+1}
+    I\brak{s}= \frac{-v\brak{0^{+}}C}{LCs^2+1}
 \end{align}
 From initial value theorem ,
 \begin{align}
     i\brak{0^{+}}=\lim_{s\to\infty}[sI\brak{s}]
 \end{align}
 \begin{align}
-    i\brak{0^{+}}=\lim_{s\to\infty}\left[s\frac{-q\brak{0^{+}}}{LCs^2+1}\right]=0
+    i\brak{0^{+}}=\lim_{s\to\infty}\left[s\frac{-v\brak{0^{+}}C}{LCs^2+1}\right]=0
 \end{align}
 From final value theorem ,
 \begin{align}
      i\brak{\infty}=\lim_{s\to0}[sI\brak{s}]
 \end{align}
 \begin{align}
-   i\brak{\infty}=\lim_{s\to0}\left[s\frac{-q\brak{0^{+}}}{LCs^2+1}\right]=0 
+   i\brak{\infty}=\lim_{s\to0}\left[s\frac{-v\brak{0^{+}}C}{LCs^2+1}\right]=0 
 \end{align}
 \begin{align}
 	\label{1}
